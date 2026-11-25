@@ -1,0 +1,32 @@
+# Install order matters for PyTorch on Windows - see docs/install_guide.md
+# (install torch/torchvision first, using the CPU index URL, then this file)
+
+# --- Backend ---
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+python-multipart>=0.0.9
+pydantic>=2.5,<3.0
+sqlalchemy>=2.0,<3.0
+requests>=2.31
+
+# --- Image / video processing ---
+numpy>=1.24,<3.0
+pillow>=10.0
+opencv-python>=4.8
+
+# --- ML / DL (torch + torchvision installed separately, see above) ---
+scikit-learn>=1.3
+transformers>=4.38
+timm>=0.9
+grad-cam>=1.5
+
+# --- Frontend, charts, reports ---
+streamlit>=1.32
+plotly>=5.18
+pandas>=2.0
+matplotlib>=3.8
+reportlab>=4.0
+
+# --- Testing ---
+pytest>=7.4
+httpx>=0.27          # needed by FastAPI's TestClient
