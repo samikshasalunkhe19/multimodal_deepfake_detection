@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.db
+.pytest_cache/
+logs/
+tmp_uploads/
+
+# large / licensed files must never be committed
+models/*
+!models/.gitkeep
+dataset/*
+!dataset/.gitkeep
+reports/*
+!reports/.gitkeep
